@@ -5,8 +5,8 @@ From the course Single Page Web Applications with AngularJS the individual modul
 
 |Module #|Title|Description|Review|
 |--------|-----|-----------|------|
-|Module 1|Lunch Checker|Check if the menu item is too much|Solution|
-|Module 2|Check off Shopping List|Check off bought items from the To buy list|Solution|
+|Module 1|Lunch Checker|Check if the menu item is too much|[Solution](https://neelavar.github.io/coursera-ng1/module1-solution/ "Module 1 Solution")|
+|Module 2|Check off Shopping List|Check off bought items from the To buy list|[Solution](https://neelavar.github.io/coursera-ng1/module2-solution/ "Module 2 Solution")|
 |Module 3|||Solution|
 |Module 4|||Solution|
 |Module 5|||Solution|
