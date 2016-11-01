@@ -27,7 +27,7 @@
     </style>
 </head>
 
-<body ng-app="CheckOffApp">
+<body ng-app="ShoppingListCheckOff" ng-cloak>
     <div class="container">
         <h1>Shopping List Check Off</h1>
 
@@ -45,7 +45,7 @@
                     </li>
                 </ul>
                 <!-- Show empty message if the toBuy Item List array size is 0 (all items are bought now)-->
-                <div class="emptyMessage" ng-show="toBuy.itemList.length === 0">
+                <div class="emptyMessage" ng-if="toBuy.itemList.length === 0">
                     Everything is bought!
                 </div>
             </div>
@@ -58,7 +58,7 @@
                     <li>Bought {{boughtItem.quantity}} {{boughtItem.name}}</li>
                 </ul>
                 <!-- Show empty message if no items are bought yet (bought Item List array size is 0)-->
-                <div class="emptyMessage" ng-show="bought.itemList.length === 0">
+                <div class="emptyMessage" ng-if="bought.itemList.length === 0">
                     Nothing bought yet.
                 </div>
             </div>

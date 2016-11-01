@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    angular.module('CheckOffApp', [])
+    angular.module('ShoppingListCheckOff', [])
         .controller('ToBuyController', ToBuyController)
         .controller('AlreadyBoughtController', AlreadyBoughtController)
         .service('ShoppingListCheckOffService', ShoppingListCheckOffService);
