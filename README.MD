@@ -1,7 +1,8 @@
 ## coursera-ng1
 Coursera AngularJS Assignments
+---
 ###Module Assignment Submissions
-From the course Single Page Web Applications with AngularJS the individual module assignments are submitted for peer review. Each of these assignments are listed below for easy access and reference.
+From the course [Single Page Web Applications with AngularJS](https://www.coursera.org/learn/single-page-web-apps-with-angularjs/home/welcome "Course page on coursera.org") the individual module assignments are submitted for peer review. Each of these assignments are listed below for easy access and reference.
 
 |Module #|Title|Description|Review|
 |--------|-----|-----------|------|
@@ -10,4 +11,5 @@ From the course Single Page Web Applications with AngularJS the individual modul
 |Module 3|||Solution|
 |Module 4|||Solution|
 |Module 5|||Solution|
+---
 @author: Prasanna Neelavar
