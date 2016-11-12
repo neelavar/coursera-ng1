@@ -7,7 +7,7 @@
         .controller('NarrowItDownController', NarrowItDownController)
         .service('MenuSearchService', MenuSearchService)
         .directive('foundItems', FoundItems)
-        .constant('ApiBasePath', 'http://davids-restaurant.herokuapp.com');
+        .constant('ApiBasePath', 'https://davids-restaurant.herokuapp.com');
 
     // Inject the service into the controllers
     NarrowItDownController.$inject = ['MenuSearchService'];
@@ -38,7 +38,7 @@
             var response = {};
             // for the first time get the menuItems from the http call
             // now the menuItems array is empty
-//            if (menuItems.length === 0) {
+            if (menuItems.length === 0) {
                 response = $http({
                     method: "GET",
                     url: (ApiBasePath + "/menu_items.json")
@@ -52,12 +52,12 @@
                 }, function (error) {
                     deferred.reject(error);
                 });
-//            }
+            }
             // if not for the first time, the menuItems array is already populated
             // now only filter the cached menuItems & return the foundItems
-//            else {
-//                deferred.resolve(getFilteredMenuItems(searchTerm));
-//            }
+            else {
+                deferred.resolve(getFilteredMenuItems(searchTerm));
+            }
             return deferred.promise;
         }; // end of getMatchedMenuItems()
 
