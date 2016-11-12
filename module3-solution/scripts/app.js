@@ -82,9 +82,6 @@
 
     function FoundItemsDirectiveLink(scope, element, attrs, controller) {
         scope.$watch('foundItems.length === 0', function (newValue, oldValue) {
-            console.log("Old value: ", oldValue);
-            console.log("New value: ", newValue);
-
             if (newValue === true) {
                 displayNothingFound();
             } else {
