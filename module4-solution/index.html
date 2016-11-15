@@ -1,37 +1,68 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <title>Narrow Down Your Menu Choice</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
+    <head>
+        <title>Restaurant Menu App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="src/styles/bootstrap.min.css">
+        <link rel="stylesheet" href="src/styles/styles.css">
+    </head>
 
-<body ng-app="NarrowItDownApp">
-    <div class="container" ng-controller="NarrowItDownController as nidCtrl">
+    <body ng-app="MenuApp">
         <div class="row">
-            <h1>Narrow Down Your Chinese Menu Choice</h1>
+            <div class="container col-md-12">
 
-            <div class="form-group">
-                <input type="text" placeholder="search term" class="form-control" ng-model="nidCtrl.searchTerm">
+                <nav class="navbar navbar-inverse navbar-fixed-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">Restaurant Menu</a>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a ui-sref="home">Home</a></li>
+                                <li><a ui-sref="categories">Categories</a></li>
+                            </ul>
+                        </div>
+                        <!--/.navbar-collapse -->
+                    </div>
+                </nav>
             </div>
-            <div class="form-group narrow-button">
-                <button class="btn btn-primary" ng-click="nidCtrl.searchMenu()">Narrow It Down For Me!</button>
+            <div class="container col-md-12">
+                <ui-view></ui-view>
             </div>
+
+            <hr/>
+          <div class="container">
+            <footer>
+                <p>&copy; 2016 Coursera Assignment</p>
+            </footer>
+          </div>
+
         </div>
-        <div class="loader" ng-if="nidCtrl.showLoader"></div>
-        <!-- found-items should be implemented as a component -->
-        <found-items found-items="nidCtrl.found" show-loader="nidCtrl.showLoader"
-        on-remove="nidCtrl.removeItem(index)">
-        </found-items>
+        <!-- /container -->
+        <!-- Load jQuery & Bootstrap JS -->
+        <script type="text/javascript" src="lib/jquery.min.js"></script>
+        <script type="text/javascript" src="lib/bootstrap.min.js"></script>
 
-    </div>
+        <!-- Load AngularJS and app scripts -->
+        <script type="text/javascript" src="lib/angular.min.js"></script>
+        <script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
+        <script type="text/javascript" src="src/scripts/menuapp.module.js"></script>
+        <script type="text/javascript" src="src/scripts/routes.js"></script>
+        <script type="text/javascript" src="src/scripts/data.module.js"></script>
 
-    <!-- Load AngularJS and app scripts -->
-    <script type="text/javascript" src="scripts/angular.min.js"></script>
-    <script type="text/javascript" src="scripts/app.js"></script>
+        <script type="text/javascript" src="src/scripts/menudata.service.js"></script>
+        <script type="text/javascript" src="src/scripts/categories.controller.js"></script>
+        <script type="text/javascript" src="src/scripts/items.controller.js"></script>
+        <script type="text/javascript" src="src/components/categories.component.js"></script>
+        <script type="text/javascript" src="src/components/items.component.js"></script>
 
-</body>
+    </body>
 
 </html>

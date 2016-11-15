@@ -1,0 +1,22 @@
+<!-- items.component.html -->
+<div class="container">
+  <table class="table table-striped">
+          <thead>
+              <tr><th>ID</th>
+                  <th>Short Name</th>
+                  <th>Name</th>
+                  <th>Description</th>
+                  <th>Price (pint)</th>
+                  <th>Price (quart)</th>
+              </tr>
+          </thead>
+          <tr ng-repeat="item in $ctrl.menuItems">
+            <td>{{item.id}}</td>
+            <td>{{item.short_name}}</td>
+            <td>{{item.name}}</td>
+            <td><small>{{item.description}}</small></td>
+            <td>{{item.price_small | currency}}</td>
+            <td>{{item.price_large | currency}}</td>
+          </tr>
+  </table>
+</div>

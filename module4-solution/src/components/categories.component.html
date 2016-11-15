@@ -1,0 +1,18 @@
+<!-- categories.component.html -->
+<div class="container">
+  <table class="table table-striped">
+          <thead>
+              <tr><th>ID</th>
+                  <th>Short Name</th>
+                  <th>Name</th>
+                  <th>Special Instructions</th>
+              </tr>
+          </thead>
+          <tr style="cursor:pointer" ng-repeat="category in $ctrl.categories" ui-sref="items({categoryShortName:category.short_name})">
+            <td>{{category.id}}</td>
+            <td>{{category.short_name}}</td>
+            <td>{{category.name}}</td>
+            <td><small>{{category.special_instructions}}</small></td>
+          </tr>
+  </table>
+</div>
