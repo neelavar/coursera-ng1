@@ -11,6 +11,6 @@
     function ItemsController(menuItems) {
         var itemsCtrl = this;
         itemsCtrl.menuItems = menuItems;
-        console.log("Received menu Items Length = ", itemsCtrl.menuItems.length);
+//        console.log("Received menu Items Length = ", itemsCtrl.menuItems.length);
     }
 })();

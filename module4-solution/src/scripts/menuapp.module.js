@@ -4,8 +4,9 @@
     'use strict';
 
     angular.module('MenuApp', [
-      'data',
-      'ui.router'
+        'data',
+        'ui.router',
+        'loader'
     ]);
 
 })();

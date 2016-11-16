@@ -1,12 +1,11 @@
 // src/scripts/categories.component.js
-// categories component
+// categories component with categories binding
 (function () {
     'use strict';
 
     angular.module('MenuApp')
-    .component('categories',{
+    .component('categoriesList',{
       templateUrl: 'src/components/categories.component.html',
-      // controller: 'CategoriesController as catCtrl',
       bindings:{
         categories: '<'
       }

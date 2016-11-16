@@ -16,6 +16,7 @@ ul {
 .loader {
   display: block;
   margin-left: 5px;
+  margin-top: 8px;
   font-size: 10px;
   float: left;
   border-top: 1.1em solid rgba(147, 147, 147, 0.2);

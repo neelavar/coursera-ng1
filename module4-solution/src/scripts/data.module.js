@@ -1,5 +1,5 @@
 // src/scripts/data.module.js
-// data - angular module and controller
+// data - angular module
 (function () {
     'use strict';
 

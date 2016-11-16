@@ -1,5 +1,6 @@
 // src/scripts/CategoriesController.js
-// Controller to handle the categories
+// Controller to handle the categories action
+// The categories data is obtained by the state resolver, using the data service
 (function() {
     'use strict';
     angular.module('MenuApp')
@@ -12,6 +13,6 @@
         var catCtrl = this;
         // console.log(categories);
         catCtrl.categories = categories;
-        console.log("Received Categories Length = ", catCtrl.categories.length);
+//        console.log("Received Categories Length = ", catCtrl.categories.length);
     }
 })();

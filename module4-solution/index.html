@@ -1,68 +1,82 @@
 <!doctype html>
 <html lang="en">
 
-    <head>
-        <title>Restaurant Menu App</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="src/styles/bootstrap.min.css">
-        <link rel="stylesheet" href="src/styles/styles.css">
-    </head>
+<head>
+    <title>Restaurant Menu App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="src/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="src/styles/styles.css">
+</head>
 
-    <body ng-app="MenuApp">
-        <div class="row">
-            <div class="container col-md-12">
+<body ng-app="MenuApp">
+    <div class="row">
+        <div class="container col-md-12">
 
-                <nav class="navbar navbar-inverse navbar-fixed-top">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a class="navbar-brand" href="#">Restaurant Menu</a>
-                        </div>
-                        <div id="navbar" class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a ui-sref="home">Home</a></li>
-                                <li><a ui-sref="categories">Categories</a></li>
-                            </ul>
-                        </div>
-                        <!--/.navbar-collapse -->
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Restaurant Menu</a>
+                        <items-loader></items-loader>
+                        <!-- Spinning Loader -->
                     </div>
-                </nav>
-            </div>
-            <div class="container col-md-12">
-                <ui-view></ui-view>
-            </div>
 
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a ui-sref="home">Home</a></li>
+                            <li><a ui-sref="categories">Categories</a></li>
+                        </ul>
+                    </div>
+                    <!--/.navbar-collapse -->
+
+                </div>
+            </nav>
+
+        </div>
+
+        <!--  Container to host different views - Categories & Items-->
+        <div class="container">
+            <ui-view></ui-view>
+        </div>
+
+        <div class="container">
             <hr/>
-          <div class="container">
             <footer>
                 <p>&copy; 2016 Coursera Assignment</p>
             </footer>
-          </div>
-
         </div>
-        <!-- /container -->
-        <!-- Load jQuery & Bootstrap JS -->
-        <script type="text/javascript" src="lib/jquery.min.js"></script>
-        <script type="text/javascript" src="lib/bootstrap.min.js"></script>
+    </div>
+    <!-- /.container -->
 
-        <!-- Load AngularJS and app scripts -->
-        <script type="text/javascript" src="lib/angular.min.js"></script>
-        <script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
-        <script type="text/javascript" src="src/scripts/menuapp.module.js"></script>
-        <script type="text/javascript" src="src/scripts/routes.js"></script>
-        <script type="text/javascript" src="src/scripts/data.module.js"></script>
+    <!-- Load jQuery & Bootstrap JS -->
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap.min.js"></script>
 
-        <script type="text/javascript" src="src/scripts/menudata.service.js"></script>
-        <script type="text/javascript" src="src/scripts/categories.controller.js"></script>
-        <script type="text/javascript" src="src/scripts/items.controller.js"></script>
-        <script type="text/javascript" src="src/components/categories.component.js"></script>
-        <script type="text/javascript" src="src/components/items.component.js"></script>
+    <!-- Load AngularJS and UI Router scripts -->
+    <script type="text/javascript" src="lib/angular.min.js"></script>
+    <script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
 
-    </body>
+    <!-- Module scripts-->
+    <script type="text/javascript" src="src/scripts/menuapp.module.js"></script>
+    <script type="text/javascript" src="src/scripts/data.module.js"></script>
+    <script type="text/javascript" src="src/loader/loader.module.js"></script>
+
+    <!-- Routes script -->
+    <script type="text/javascript" src="src/scripts/routes.js"></script>
+
+    <!-- Component Artifacts -->
+    <script type="text/javascript" src="src/scripts/menudata.service.js"></script>
+    <script type="text/javascript" src="src/scripts/categories.controller.js"></script>
+    <script type="text/javascript" src="src/scripts/items.controller.js"></script>
+    <script type="text/javascript" src="src/components/categories.component.js"></script>
+    <script type="text/javascript" src="src/components/items.component.js"></script>
+    <script type="text/javascript" src="src/loader/itemsloader.component.js"></script>
+
+</body>
 
 </html>
