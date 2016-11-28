@@ -17,7 +17,7 @@
             var promise = MenuService.getSpecificMenuItem($ctrl.user.favmenuitem);
             promise.then(function (result) {
                 // valid menu item - hence save user preferences
-                $ctrl.user.savedmenuitem = result.data;
+                $ctrl.user.savedmenuitem = result;
                 UserService.saveUser($ctrl.user);
                 $ctrl.saved = true;
                 $ctrl.inValidMenu = false;

@@ -31,13 +31,10 @@
         };
 
         service.getSpecificMenuItem = function (menuItem) {
-            return $http.get(ApiPath + '/menu_items/' + menuItem + '.json');
-//                .then(function (response) {
-//                return response.data;
-//            },function(error){
-//                console.log("Error observed in menu service: ", error.status);
-//                return new Error(error);
-//            });
+            return $http.get(ApiPath + '/menu_items/' + menuItem.toUpperCase() + '.json')
+                .then(function (response) {
+                return response.data;
+            });
         };
 
     }
