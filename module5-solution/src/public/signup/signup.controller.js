@@ -4,9 +4,9 @@
     angular.module('public')
         .controller('SignUpController', SignUpController);
 
-    SignUpController.$inject = ['MenuService', 'UserService'];
+    SignUpController.$inject = ['MenuService', 'UserService', '$timeout', '$state'];
 
-    function SignUpController(MenuService, UserService) {
+    function SignUpController(MenuService, UserService, $timeout, $state) {
         var $ctrl = this;
         $ctrl.user = {};
         $ctrl.inValidMenu = false;
@@ -21,6 +21,7 @@
                 UserService.saveUser($ctrl.user);
                 $ctrl.saved = true;
                 $ctrl.inValidMenu = false;
+                $timeout($state.go('public.myinfo'), 5000);
             }, function (error) {
                 // invalid menu item - hence show error
                 UserService.saveUser(null);
